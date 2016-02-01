@@ -1,6 +1,6 @@
 window.$ = window.jQuery = require('jquery')
 require('semantic-ui-css/semantic')
-React = require('react/addons')
+React = require('react')
 ReactDOM = require('react-dom')
 reactRouter = require('react-router')
 Header = require('./header')
@@ -44,4 +44,4 @@ routes =
   </Route>
 
 $ ->
-  ReactDOM.render(<Router>{routes}</Router>, document.body)
+  ReactDOM.render(<Router>{routes}</Router>, document.getElementById('app'))

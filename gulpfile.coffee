@@ -85,7 +85,7 @@ gulp.task 'server', ->
     execMap:
       coffee: "#{modules_path}/.bin/coffee"
     env:
-      PORT: process.env.PORT or 3000
+      PORT: process.env.PORT or 4000
 
 gulp.task 'default', ['clean', 'copy', 'css', 'server', 'js-dev', 'watch']
 
@@ -94,3 +94,4 @@ gulp.task 'watch', ['copy'], ->
   gulp.watch(["#{dist_path}/**/*"]).on('change', livereload.changed)
   gulp.watch ["#{src_path}/**/*.less"], ['css']
   gulp.watch ["#{src_path}/**/*.html"], ['copy']
+
